@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}Скоро в прокате{% endblock %}
+
+{% block content %}
+    <div id="home">
+        <div class="container">
+            <div class="row pad-bottom" data-anim-type="fade-in-up">
+                {% for movies in announcement %}
+                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                        <img src="{{ movies.poster.url }}" alt="{{ movies.movie_title_eng }}">
+                        <a href="{{ movies.get_absolute_url }}" class="editContent text-center">
+                            {{ movies.movie_title }}
+                        </a><br><br>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endblock %}

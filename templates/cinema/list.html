@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% load crispy_forms_filters %}
+{% crispy comment_form comment_form.helper %}
+{% crispy form %}
+
+{% block title %}{{ movie.movie_title }}{% endblock %}
+
+{% block content %}
+    <div id="home">
+        <div class="container">
+            <div class="row pad-bottom">
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                    <img src="{{ movie.poster.url }}" alt="{{ movie.movie_title_eng }}">
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                    <h2>{{ movie.movie_title }}</h2><br>
+                    <p class="text-left">
+                        Оригинальное название: {{ movie.movie_title_eng }}
+                    </p>
+                    <p class="text-left">
+                        Режиссер: {{ movie.director }}
+                    </p>
+                    <p class="text-left">
+                        Жанр: {{ movie.genre }}
+                    </p>
+                    <p class="text-left">
+                        Длительность: {{ movie.duration }}
+                    </p>
+                    <p class="text-left">
+                        Премьера: {{ movie.premiere }}
+                    </p>
+                    <p class="text-left">
+                        Производство: {{ movie.country }}
+                    </p>
+                    <p class="text-left">
+                        В главных ролях: {{ movie.cast }}
+                    </p>
+                    <p class="text-left">
+                        Сюжет: {{ movie.plot }}
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="container text-left">
+            <div class="row" data-anim-type="fade-in-up">
+                <div class="col-xs-11 col-sm-11 col-md-11 col-lg-11">
+                    {% with comments.count as total_comments %}
+                        <h2>
+                            {{ total_comments }} comment{{ total_comments|pluralize }}
+                        </h2>
+                    {% endwith %}
+                    {% for comment in comments %}
+                        <p class="info">
+                            Comment {{ forloop.counter }} by {{ comment.author_name }}
+                            {{ comment.created }}
+                        </p>
+                        {{ comment.comment_text|linebreaks }}
+                    {% empty %}
+                        <p>There are no comments yet.</p>
+                    {% endfor %}
+                    {% if new_comment %}
+                        <h2>Your comment has been added.</h2>
+                    {% else %}
+                        <h2>Add a new comment</h2>
+                        <form action="." method="post">
+                            {% csrf_token %}
+                            <div class="form-group text-left">
+                                {{ comment_form|crispy }}
+                            </div>
+                            <button type="submit" class="save btn btn-default">Сохранить</button>
+                        </form>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
