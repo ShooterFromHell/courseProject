@@ -342,7 +342,7 @@ TEAM SECTION STYLES
     position: relative;
     -webkit-transition: all 0.2s ease;
     -moz-transition: all 0.2s ease;
-    -ms-transform: all 0.2s ease;
+    /*-ms-transform: all 0.2s ease;*/
     -o-transition: all 0.2s ease;
     transition: all 0.2s ease;
     margin-bottom: 30px;
