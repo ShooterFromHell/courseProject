@@ -34,6 +34,25 @@ class Comment(models.Model):
 
     class Meta:
         ordering = ('created',)
+        verbose_name = 'Комментарий'
+        verbose_name_plural = 'Комментарии'
 
     def __str__(self):
         return 'Comment by {} on {}'.format(self.author_name, self.movie)
+
+
+class Seance(models.Model):
+    movie = models.ForeignKey(Movie, verbose_name="фильм", on_delete=models.CASCADE, related_name='seance')
+    start = models.DateTimeField(verbose_name="начало сеанса", default=timezone.now)
+    end = models.DateTimeField(verbose_name="конец сеанса", default=timezone.now())
+    hall = models.IntegerField(verbose_name="номер зала")
+
+    class Meta:
+        verbose_name = 'Сеанс'
+        verbose_name_plural = 'Сеансы'
+
+# class Seats(models.Model):
+#     seance = models.ForeignKey(Seance, verbose_name="сеанс", on_delete=models.CASCADE)
+#     row = models.IntegerField(verbose_name="ряд")
+#     seat = models.IntegerField(verbose_name="место")
+#     type = models.BinaryField(verbose_name="свободно/занято")

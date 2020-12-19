@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load i18n %}
 {% load crispy_forms_tags %}
 {% load crispy_forms_filters %}
 {% crispy comment_form comment_form.helper %}
@@ -44,25 +45,19 @@
         </div>
         <div class="container text-left">
             <div class="row" data-anim-type="fade-in-up">
+                {% for seance in seance %}
+                    <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
+                        <a class="semi-transparent-button"
+                           href="{% url 'order' seance.id %}">{{ seance.start.date }} {{ seance.start.time }}</a>
+                    </div>
+                {% endfor %}
+            </div>
+            <br>
+        </div>
+        <div class="container text-left">
+            <div class="row" data-anim-type="fade-in-up">
                 <div class="col-xs-11 col-sm-11 col-md-11 col-lg-11">
-                    {% with comments.count as total_comments %}
-                        <h2>
-                            {{ total_comments }} comment{{ total_comments|pluralize }}
-                        </h2>
-                    {% endwith %}
-                    {% for comment in comments %}
-                        <p class="info">
-                            Comment {{ forloop.counter }} by {{ comment.author_name }}
-                            {{ comment.created }}
-                        </p>
-                        {{ comment.comment_text|linebreaks }}
-                    {% empty %}
-                        <p>There are no comments yet.</p>
-                    {% endfor %}
-                    {% if new_comment %}
-                        <h2>Your comment has been added.</h2>
-                    {% else %}
-                        <h2>Add a new comment</h2>
+                    {% if user.is_authenticated %}
                         <form action="." method="post">
                             {% csrf_token %}
                             <div class="form-group text-left">
@@ -70,7 +65,19 @@
                             </div>
                             <button type="submit" class="save btn btn-default">Сохранить</button>
                         </form>
+                    {% else %}
+                        <h2>Войдите в аккаунт чтобы оставить комментарий</h2>
                     {% endif %}
+                    <br>
+                    {% for comment in comments %}
+                        <p class="media-body">
+                            {{ comment.author_name }}
+                            {{ comment.created }}
+                            {{ comment.comment_text|linebreaks }}
+                        </p>
+                    {% empty %}
+                        <p>Комментариев нет</p>
+                    {% endfor %}
                 </div>
             </div>
         </div>

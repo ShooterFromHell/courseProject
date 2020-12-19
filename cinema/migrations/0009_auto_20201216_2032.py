@@ -5,7 +5,6 @@ import django.db.models.deletion
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
         ('cinema', '0008_movie_end_of_distribution'),
     ]
@@ -23,6 +22,7 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='comment',
             name='movie',
-            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='comments', to='cinema.movie', verbose_name='фильм'),
+            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='comments',
+                                    to='cinema.movie', verbose_name='фильм'),
         ),
     ]
