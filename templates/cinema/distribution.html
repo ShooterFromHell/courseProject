@@ -8,8 +8,8 @@
             <div class="row pad-bottom" data-anim-type="fade-in-up">
                 {% for dist in distribution %}
                     <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-                        <img src="{{ dist.poster.url }}" href="{{ dist.get_absolute_url }}"
-                             alt="{{ dist.movie_title_eng }}">
+                        <a href="{{ dist.get_absolute_url }}"><img src="{{ dist.poster.url }}" border="0"
+                                                                   alt="{{ dist.movie_title_eng }}"></a>
                         <p>
                             {{ dist.movie_title }}
                         </p><br><br>

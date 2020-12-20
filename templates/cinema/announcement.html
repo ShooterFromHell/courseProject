@@ -8,8 +8,8 @@
             <div class="row pad-bottom" data-anim-type="fade-in-up">
                 {% for movies in announcement %}
                     <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-                        <img src="{{ movies.poster.url }}" href="{{ movies.get_absolute_url }}"
-                             alt="{{ movies.movie_title_eng }}">
+                        <a href="{{ movies.get_absolute_url }}"><img src="{{ movies.poster.url }}" border="0"
+                                                                     alt="{{ movies.movie_title_eng }}"></a>
                         <p>
                             {{ movies.movie_title }}
                         </p><br><br>
