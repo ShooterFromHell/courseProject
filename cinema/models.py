@@ -28,7 +28,7 @@ class Movie(models.Model):
 class Comment(models.Model):
     movie = models.ForeignKey(Movie, verbose_name="фильм", on_delete=models.CASCADE, related_name='comments')
     author_name = models.CharField(verbose_name="имя автора", max_length=50)
-    comment_text = models.TextField(verbose_name="текст комментария")
+    comment_text = models.TextField(verbose_name="текст комментария", max_length=500)
     created = models.DateTimeField(default=timezone.now)
     active = models.BooleanField(default=True)
 
@@ -51,8 +51,8 @@ class Seance(models.Model):
         verbose_name = 'Сеанс'
         verbose_name_plural = 'Сеансы'
 
-# class Seats(models.Model):
+
+# class Ticket(models.Model):
 #     seance = models.ForeignKey(Seance, verbose_name="сеанс", on_delete=models.CASCADE)
 #     row = models.IntegerField(verbose_name="ряд")
 #     seat = models.IntegerField(verbose_name="место")
-#     type = models.BinaryField(verbose_name="свободно/занято")

@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'crispy_forms',
+    'snowpenguin.django.recaptcha3',
 ]
 
 MIDDLEWARE = [
@@ -160,3 +161,8 @@ STATIC_URL = '/static/'
 # Simplified static file serving.
 # https://warehouse.python.org/project/whitenoise/
 # STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+RECAPTCHA_PUBLIC_KEY = '6Le8Cg4aAAAAAEDtFzvEqgUXr3ZuFLHwboDvQl-J'
+RECAPTCHA_PRIVATE_KEY = '6Le8Cg4aAAAAAIZN78saC0Hrfch1kFxqTxl2tXzE'
+RECAPTCHA_DEFAULT_ACTION = 'generic'
+RECAPTCHA_SCORE_THRESHOLD = 0.5
