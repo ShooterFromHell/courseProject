@@ -2,6 +2,7 @@ from django.db import models
 from django.db.models import ImageField
 from django.urls import reverse
 from django.utils import timezone
+from embed_video.fields import EmbedVideoField
 
 
 class Movie(models.Model):
@@ -16,6 +17,7 @@ class Movie(models.Model):
     director = models.CharField('режиссер', max_length=100)
     cast = models.CharField('актеры', max_length=250)
     plot = models.TextField('краткое описание')
+    video = EmbedVideoField(blank=True, verbose_name='Видео')
 
     def get_absolute_url(self):
         return reverse("film", kwargs={"movie_id": self.id})
@@ -50,7 +52,6 @@ class Seance(models.Model):
     class Meta:
         verbose_name = 'Сеанс'
         verbose_name_plural = 'Сеансы'
-
 
 # class Ticket(models.Model):
 #     seance = models.ForeignKey(Seance, verbose_name="сеанс", on_delete=models.CASCADE)
