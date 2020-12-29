@@ -47,7 +47,7 @@ INSTALLED_APPS = [
     'allauth.account',
     'crispy_forms',
     'snowpenguin.django.recaptcha3',
-    'embed_video',
+#    'embed_video',
 ]
 
 MIDDLEWARE = [
@@ -80,7 +80,7 @@ TEMPLATES = [
     },
 ]
 
-TEMPLATE_CONTEXT_PROCESSORS = ('django.core.context_processors.request', )
+#TEMPLATE_CONTEXT_PROCESSORS = ('django.core.context_processors.request', )
 
 WSGI_APPLICATION = 'courseProject.wsgi.application'
 

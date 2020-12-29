@@ -17,7 +17,7 @@ class Movie(models.Model):
     director = models.CharField('режиссер', max_length=100)
     cast = models.CharField('актеры', max_length=250)
     plot = models.TextField('краткое описание')
-    video = EmbedVideoField(blank=True, verbose_name='Видео')
+#    video = EmbedVideoField(blank=True, verbose_name='Видео')
 
     def get_absolute_url(self):
         return reverse("film", kwargs={"movie_id": self.id})
