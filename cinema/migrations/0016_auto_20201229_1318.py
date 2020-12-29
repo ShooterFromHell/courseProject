@@ -7,7 +7,6 @@ import embed_video.fields
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
         ('cinema', '0015_auto_20201219_1511'),
     ]
@@ -26,6 +25,7 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='seance',
             name='end',
-            field=models.DateTimeField(default=datetime.datetime(2020, 12, 29, 11, 18, 3, 65483, tzinfo=utc), verbose_name='конец сеанса'),
+            field=models.DateTimeField(default=datetime.datetime(2020, 12, 29, 11, 18, 3, 65483, tzinfo=utc),
+                                       verbose_name='конец сеанса'),
         ),
     ]
