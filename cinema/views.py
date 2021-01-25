@@ -55,7 +55,7 @@ def order(request, seance_id):
     try:
         s = Seance.objects.get(id=seance_id)
         a = Seance.movie
-        b = Ticket.objects.get(seance=s)
+        #b = Ticket.objects.get(seance=s)
     except:
         raise Http404("Сеанс не найден")
-    return render(request, 'cinema/order.html', {'movie': a, 'seance': s, 'tickets': b})
+    return render(request, 'cinema/order.html', {'movie': a, 'seance': s,})

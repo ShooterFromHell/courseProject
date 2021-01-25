@@ -191,11 +191,7 @@
                                 data-status-user-session="0"
                                 data-status-pouf="0" data-area-number="1" data-row-index="0" data-column-index="0"
                                 data-row-physical-name="11" id="22"
-                                {% if tickets.seat == id %}
-                                class="GOOD seat-close" data-status="1"
-                                {% else %}
-                                class="GOOD"  data-status="0"
-                                {% endif %}
+                                class="GOOD" data-status="0"
                                 data-head-office-grouping-code="TT00000001"
                                 data-ticket-type-code="0010" data-ticket-type="GOOD" data-price="85"
                                 data-area-category-code="0000000001" data-tippy="11 Ряд, 22 Место
@@ -3232,10 +3228,10 @@
                                                                         id="booking-submit-summary">0<small> грн</small></span></strong>
                         </div>
                         <script>
-                            function save(){
+                            function save() {
                                 var data = getAllTicketsInCart();
                                 var res = '';
-                                for (var i=0;i<data.length;i++){
+                                for (var i = 0; i < data.length; i++) {
                                     res += 'Ряд ' + data.item(i).getAttribute("data-row-physical-name") + ', Место '
                                         + data.item(i).getAttribute("data-place-id") + '   ' + data.item(i).getAttribute("data-price") + 'грн\n';
                                 }
