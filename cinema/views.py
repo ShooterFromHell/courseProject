@@ -3,7 +3,7 @@ from django.shortcuts import render
 from django.urls import reverse
 from django.http import Http404, HttpResponseRedirect
 from .forms import CommentForm
-from .models import Movie, Seance, Ticket
+from .models import Movie, Seance
 
 
 def film(request, movie_id):
@@ -55,7 +55,6 @@ def order(request, seance_id):
     try:
         s = Seance.objects.get(id=seance_id)
         a = Seance.movie
-        #b = Ticket.objects.get(seance=s)
     except:
         raise Http404("Сеанс не найден")
-    return render(request, 'cinema/order.html', {'movie': a, 'seance': s,})
+    return render(request, 'cinema/order.html', {'movie': a, 'seance': s})
