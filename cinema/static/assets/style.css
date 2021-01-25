@@ -35,7 +35,21 @@ textarea {
 .semi-transparent-button:hover,
 .semi-transparent-button:focus,
 .semi-transparent-button:active {
-  background: #fff;
-  color: #000;
-  transition: all 0.5s ease-in;
+    background: #fff;
+    color: #000;
+    transition: all 0.5s ease-in;
 }
+
+.scrollup {
+    width: 50px;
+    height: 50px;
+    opacity: 1;
+    position: fixed;
+    bottom: 50px;
+    right: 100px;
+    display: none;
+    text-indent: -9999px;
+    background: url('/media/images/icon_top.png') no-repeat;
+}
+
+.grecaptcha-badge {visibility: hidden;}

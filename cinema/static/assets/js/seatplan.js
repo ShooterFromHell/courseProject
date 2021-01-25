@@ -77,7 +77,7 @@ function paintTicketInSideBar(ticketAttr) {
         <div class="book-ticket">
           <div class="book-ticket-row">${ticketAttr.row} ряд</div>
           <div class="book-ticket-place">
-            <span>${ticketAttr.place} місце</span><span class="text-secondary">${ticketAttr.ticketType}</span>
+            <span>${ticketAttr.place} место</span><span class="text-secondary">${ticketAttr.ticketType}</span>
           </div>
           <div class="book-ticket-price">
               <strong>${ticketAttr.price}<small> ${CurrencyType}</small></strong>
@@ -470,7 +470,7 @@ function changeSeatStatusInCart($seat) {
             let message_id = `count-more-than-allow`
             if (!document.getElementById(message_id)) {
                 document.getElementById("list-of-tickets-in-order")
-                    .insertAdjacentHTML("afterbegin", `<li id="${message_id}" class="restrict-count">Кількість білетів не може бути більше ${getCartTicketQty()} шт.</li>`);
+                    .insertAdjacentHTML("afterbegin", `<li id="${message_id}" class="restrict-count">Количество билетов не может быть больше ${getCartTicketQty()} шт.</li>`);
                 setTimeout(
                     function () {
                         document.getElementById(message_id).remove()

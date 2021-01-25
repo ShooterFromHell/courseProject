@@ -53,7 +53,8 @@ class Seance(models.Model):
         verbose_name = 'Сеанс'
         verbose_name_plural = 'Сеансы'
 
-# class Ticket(models.Model):
-#     seance = models.ForeignKey(Seance, verbose_name="сеанс", on_delete=models.CASCADE)
-#     row = models.IntegerField(verbose_name="ряд")
-#     seat = models.IntegerField(verbose_name="место")
+
+class Ticket(models.Model):
+    seance = models.ForeignKey(Seance, verbose_name="сеанс", on_delete=models.CASCADE)
+    row = models.CharField(verbose_name="ряд", max_length=3)
+    seat = models.CharField(verbose_name="место", max_length=3)
