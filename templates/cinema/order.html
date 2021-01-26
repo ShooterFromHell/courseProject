@@ -3206,17 +3206,33 @@
                                                                         id="booking-submit-summary">0<small> грн</small></span></strong>
                         </div>
                         <script>
-                            function save() {
-                                var data = getAllTicketsInCart();
-                                var res = '';
-                                for (var i = 0; i < data.length; i++) {
-                                    res += 'Ряд ' + data.item(i).getAttribute("data-row-physical-name") + ', Место '
-                                        + data.item(i).getAttribute("data-place-id") + '   ' + data.item(i).getAttribute("data-price") + 'грн\n';
+                            function order() {
+                                var email = prompt("Введите пожалуйста свой email ", "");
+                                var pattern = /^([a-z0-9_\.-])+@[a-z0-9-]+\.([a-z]{2,4}\.)?[a-z]{2,4}$/i;
+                                if (validateEmail(email) == true) {
+                                    var data = getAllTicketsInCart();
+                                    var res = 'Ваш заказ:\n';
+                                    for (var i = 0; i < data.length; i++) {
+                                        res += 'Ряд ' + data.item(i).getAttribute("data-row-physical-name") + ', Место '
+                                            + data.item(i).getAttribute("data-place-id") + '   ' + data.item(i).getAttribute("data-price") + 'грн\n';
+                                    }
+                                    let tickets = {sum: getCartTicketSum(), count: getCartTicketQty()}
+                                    res += 'Итого: ' + `${tickets.count} ${decletionOfWordTicket(tickets.count)}, ${tickets.sum} грн\n`
+                                        + 'Почта для получения билетов: ' + email + '\n Благодарим Вас за покупку)';
+                                    alert(res);
+                                    parent.location = '/';
+                                } else{
+                                    alert("Недопустимое значение. Введите верное значение");
+                                    order();
                                 }
-                                alert(res);
+                            }
+
+                            function validateEmail(email) {
+                                var pattern = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+                                return pattern.test(email);
                             }
                         </script>
-                        <button id="btn-next" class="btn-next" onclick="save()">Забронировать</button>
+                        <button id="btn-next" class="btn-next" onclick="order()" href="/">Забронировать</button>
                     </div>
                 </div>
             </div>

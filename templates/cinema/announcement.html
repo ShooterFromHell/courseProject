@@ -1,12 +1,13 @@
 {% extends 'base.html' %}
 
+{% block meta %}<meta name="Keywords" content="кинотеатр, Cinema planet, фильмы, анонсы"> {% endblock %}
 {% block title %}Скоро в прокате{% endblock %}
 
 {% block content %}
     <div id="home">
         <div class="container">
             <div class="row pad-bottom" data-anim-type="fade-in-up">
-            <h1>Скоро в прокате</h1><br>
+                <h1>Скоро в прокате</h1><br>
                 {% for movies in announcement %}
                     <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
                         <a href="{{ movies.get_absolute_url }}"><img src="{{ movies.poster.url }}" border="0"

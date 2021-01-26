@@ -6,6 +6,7 @@
 {% crispy comment_form comment_form.helper %}
 {% crispy form %}
 
+{% block meta %}<meta name="Keywords" content="кинотеатр, Cinema planet, фильмы, {{ movie.movie_title }}, {{ movie.movie_title_eng }}"> {% endblock %}
 {% block title %}{{ movie.movie_title }}{% endblock %}
 
 {% block content %}

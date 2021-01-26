@@ -1,12 +1,13 @@
 {% extends 'base.html' %}
 
+{% block meta %}<meta name="Keywords" content="кинотеатр, Cinema planet, фильмы, прокат"> {% endblock %}
 {% block title %}Сейчас в кино{% endblock %}
 
 {% block content %}
     <div id="home">
         <div class="container">
             <div class="row pad-bottom" data-anim-type="fade-in-up">
-            <h1>Сейчас в кино</h1><br>
+                <h1>Сейчас в кино</h1><br>
                 {% for dist in distribution %}
                     <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
                         <a href="{{ dist.get_absolute_url }}"><img src="{{ dist.poster.url }}" border="0"
