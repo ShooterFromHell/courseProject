@@ -27,7 +27,7 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'pmzesmdcd!$aev=0yfagg7s%ms18+1
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
-#DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
+# DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
 
 ALLOWED_HOSTS = ['cinemaplanet.herokuapp.com', '127.0.0.1', 'protected-scrubland-38793.herokuapp.com']
 
@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'allauth.account',
     'crispy_forms',
     'snowpenguin.django.recaptcha3',
+    'django.contrib.sitemaps',
     #    'embed_video',
 ]
 

@@ -26,7 +26,8 @@ class Movie(models.Model):
 
 
 class Comment(models.Model):
-    movie = models.ForeignKey(Movie, verbose_name="фильм", on_delete=models.CASCADE, related_name='comments', null=False)
+    movie = models.ForeignKey(Movie, verbose_name="фильм", on_delete=models.CASCADE, related_name='comments',
+                              null=False)
     author_name = models.CharField(verbose_name="имя автора", max_length=50, null=False)
     comment_text = models.TextField(verbose_name="текст комментария", max_length=500, null=False)
     created = models.DateTimeField(default=timezone.now, null=False)
