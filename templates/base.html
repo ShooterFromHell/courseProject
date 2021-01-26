@@ -42,24 +42,24 @@
     <![endif]-->
     <link href="{% static 'assets/style.css' %}" rel="stylesheet"/>
     <link rel="shortcut icon" href="/media/images/favicon.ico" type="image/x-icon">
-    <script>
-        window.onscroll = function () {
-            scrollFunction()
-        };
-
-        function scrollFunction() {
-            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-                document.getElementById("scrollup").style.display = "block";
-            } else {
-                document.getElementById("scrollup").style.display = "none";
-            }
-        }
-
-        function topFunction() {
-            document.body.scrollTop = 0;
-            document.documentElement.scrollTop = 0;
-        }
-    </script>
+{#    <script>#}
+{#        window.onscroll = function () {#}
+{#            scrollFunction()#}
+{#        };#}
+{##}
+{#        function scrollFunction() {#}
+{#            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {#}
+{#                document.getElementById("scrollup").style.display = "block";#}
+{#            } else {#}
+{#                document.getElementById("scrollup").style.display = "none";#}
+{#            }#}
+{#        }#}
+{##}
+{#        function topFunction() {#}
+{#            document.body.scrollTop = 0;#}
+{#            document.documentElement.scrollTop = 0;#}
+{#        }#}
+{#    </script>#}
     {% recaptcha_init %}
     {% recaptcha_ready action_name='homepage' %}
 </head>
@@ -158,7 +158,7 @@
 <!-- CUSTOM SCRIPTS -->
 <script src="{% static 'assets/js/custom-solid.js' %}"></script>
 
-<a class="scrollup" id="scrollup">Наверх</a>
+{#<a class="scrollup" id="scrollup">Наверх</a>#}
 
 </body>
 </html>
