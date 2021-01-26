@@ -30,8 +30,6 @@
     <link href="{% static 'assets/ionicons.css' %}" rel="stylesheet"/>
     <!-- FONT AWESOME ICONS STYLES -->
     <link href="{% static 'assets/font-awesome.css' %}" rel="stylesheet"/>
-    <!-- FANCYBOX POPUP STYLES -->
-    <link href="{% static 'assets/js/source/jquery.fancybox.css' %}" rel="stylesheet"/>
     <!-- STYLES FOR VIEWPORT ANIMATION -->
     <link href="{% static 'assets/animations.min.css' %}" rel="stylesheet"/>
     <!-- CUSTOM CSS -->
@@ -42,24 +40,24 @@
     <![endif]-->
     <link href="{% static 'assets/style.css' %}" rel="stylesheet"/>
     <link rel="shortcut icon" href="/media/images/favicon.ico" type="image/x-icon">
-{#    <script>#}
-{#        window.onscroll = function () {#}
-{#            scrollFunction()#}
-{#        };#}
-{##}
-{#        function scrollFunction() {#}
-{#            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {#}
-{#                document.getElementById("scrollup").style.display = "block";#}
-{#            } else {#}
-{#                document.getElementById("scrollup").style.display = "none";#}
-{#            }#}
-{#        }#}
-{##}
-{#        function topFunction() {#}
-{#            document.body.scrollTop = 0;#}
-{#            document.documentElement.scrollTop = 0;#}
-{#        }#}
-{#    </script>#}
+    {#    <script>#}
+    {#        window.onscroll = function () {#}
+    {#            scrollFunction()#}
+    {#        };#}
+    {##}
+    {#        function scrollFunction() {#}
+    {#            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {#}
+    {#                document.getElementById("scrollup").style.display = "block";#}
+    {#            } else {#}
+    {#                document.getElementById("scrollup").style.display = "none";#}
+    {#            }#}
+    {#        }#}
+    {##}
+    {#        function topFunction() {#}
+    {#            document.body.scrollTop = 0;#}
+    {#            document.documentElement.scrollTop = 0;#}
+    {#        }#}
+    {#    </script>#}
     {% recaptcha_init %}
     {% recaptcha_ready action_name='homepage' %}
 </head>
