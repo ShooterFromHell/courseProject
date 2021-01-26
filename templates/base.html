@@ -56,29 +56,10 @@
         }
 
         function topFunction() {
-            document.body.animate({scrollTop: 0}, 600);
-            {#document.documentElement.scrollTop = 0;#}
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
         }
     </script>
-{#    <script async src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>#}
-{#    <script type="text/javascript">#}
-{#        $(document).ready(function () {#}
-{##}
-{#            $(window).scroll(function () {#}
-{#                if ($(this).scrollTop() > 200) {#}
-{#                    $('.scrollup').fadeIn();#}
-{#                } else {#}
-{#                    $('.scrollup').fadeOut();#}
-{#                }#}
-{#            });#}
-{##}
-{#            $('.scrollup').click(function () {#}
-{#                $("html, body").animate({scrollTop: 0}, 600);#}
-{#                return false;#}
-{#            });#}
-{##}
-{#        });#}
-{#    </script>#}
     {% recaptcha_init %}
     {% recaptcha_ready action_name='homepage' %}
 </head>
@@ -169,10 +150,6 @@
 <script src="{% static 'assets/js/bootstrap.js' %}"></script>
 <!-- EASING SCROLL SCRIPTS PLUGIN -->
 <script src="{% static 'assets/js/vegas/jquery.vegas.min.js' %}"></script>
-<!-- VEGAS SLIDESHOW SCRIPTS -->
-<script src="{% static 'assets/js/jquery.easing.min.js' %}"></script>
-<!-- FANCYBOX PLUGIN -->
-<script src="{% static 'assets/js/source/jquery.fancybox.js' %}"></script>
 <!-- ISOTOPE SCRIPTS -->
 <script src="{% static 'assets/js/jquery.isotope.js' %}"></script>
 <!-- VIEWPORT ANIMATION SCRIPTS   -->
@@ -181,7 +158,7 @@
 <!-- CUSTOM SCRIPTS -->
 <script src="{% static 'assets/js/custom-solid.js' %}"></script>
 
-<a href="#" class="scrollup" id="scrollup">Наверх</a>
+<a class="scrollup" id="scrollup">Наверх</a>
 
 </body>
 </html>
