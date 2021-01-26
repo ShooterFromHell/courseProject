@@ -1,0 +1,224 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+		<!--	created with www.mysitemapgenerator.com	-->
+		<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url>
+	<loc>https://cinemaplanet.herokuapp.com/</loc>
+	<lastmod>2021-01-26T13:04:43+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>https://cinemaplanet.herokuapp.com/distribution/</loc>
+	<lastmod>2021-01-26T13:04:44+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://cinemaplanet.herokuapp.com/announcement/</loc>
+	<lastmod>2021-01-26T13:04:46+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://cinemaplanet.herokuapp.com/accounts/signup/</loc>
+	<lastmod>2021-01-26T13:04:47+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://cinemaplanet.herokuapp.com/accounts/login/</loc>
+	<lastmod>2021-01-26T13:04:47+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://cinemaplanet.herokuapp.com/1/</loc>
+	<lastmod>2021-01-26T13:04:47+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://cinemaplanet.herokuapp.com/3/</loc>
+	<lastmod>2021-01-26T13:04:47+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://cinemaplanet.herokuapp.com/4/</loc>
+	<lastmod>2021-01-26T13:04:47+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://cinemaplanet.herokuapp.com/10/</loc>
+	<lastmod>2021-01-26T13:04:48+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://cinemaplanet.herokuapp.com/2/</loc>
+	<lastmod>2021-01-26T13:04:50+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://cinemaplanet.herokuapp.com/5/</loc>
+	<lastmod>2021-01-26T13:04:48+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://cinemaplanet.herokuapp.com/6/</loc>
+	<lastmod>2021-01-26T13:04:48+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://cinemaplanet.herokuapp.com/7/</loc>
+	<lastmod>2021-01-26T13:04:48+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://cinemaplanet.herokuapp.com/8/</loc>
+	<lastmod>2021-01-26T13:04:48+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://cinemaplanet.herokuapp.com/9/</loc>
+	<lastmod>2021-01-26T13:04:49+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://cinemaplanet.herokuapp.com/accounts/password/reset/</loc>
+	<lastmod>2021-01-26T13:04:49+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://cinemaplanet.herokuapp.com/order/2/</loc>
+	<lastmod>2021-01-26T13:04:50+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://cinemaplanet.herokuapp.com/order/3/</loc>
+	<lastmod>2021-01-26T13:04:51+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://cinemaplanet.herokuapp.com/order/4/</loc>
+	<lastmod>2021-01-26T13:04:52+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://cinemaplanet.herokuapp.com/order/5/</loc>
+	<lastmod>2021-01-26T13:04:51+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://cinemaplanet.herokuapp.com/order/6/</loc>
+	<lastmod>2021-01-26T13:04:54+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://cinemaplanet.herokuapp.com/order/12/</loc>
+	<lastmod>2021-01-26T13:04:52+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://cinemaplanet.herokuapp.com/order/13/</loc>
+	<lastmod>2021-01-26T13:04:53+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://cinemaplanet.herokuapp.com/order/14/</loc>
+	<lastmod>2021-01-26T13:04:53+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://cinemaplanet.herokuapp.com/order/15/</loc>
+	<lastmod>2021-01-26T13:04:54+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://cinemaplanet.herokuapp.com/order/16/</loc>
+	<lastmod>2021-01-26T13:04:54+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://cinemaplanet.herokuapp.com/order/23/</loc>
+	<lastmod>2021-01-26T13:04:55+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://cinemaplanet.herokuapp.com/order/24/</loc>
+	<lastmod>2021-01-26T13:04:55+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://cinemaplanet.herokuapp.com/order/25/</loc>
+	<lastmod>2021-01-26T13:04:55+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://cinemaplanet.herokuapp.com/order/26/</loc>
+	<lastmod>2021-01-26T13:04:55+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://cinemaplanet.herokuapp.com/order/18/</loc>
+	<lastmod>2021-01-26T13:04:56+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://cinemaplanet.herokuapp.com/order/19/</loc>
+	<lastmod>2021-01-26T13:04:57+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://cinemaplanet.herokuapp.com/order/20/</loc>
+	<lastmod>2021-01-26T13:04:56+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://cinemaplanet.herokuapp.com/order/21/</loc>
+	<lastmod>2021-01-26T13:04:57+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://cinemaplanet.herokuapp.com/order/32/</loc>
+	<lastmod>2021-01-26T13:04:57+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://cinemaplanet.herokuapp.com/order/33/</loc>
+	<lastmod>2021-01-26T13:04:58+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://cinemaplanet.herokuapp.com/order/34/</loc>
+	<lastmod>2021-01-26T13:04:58+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://cinemaplanet.herokuapp.com/order/28/</loc>
+	<lastmod>2021-01-26T13:04:58+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://cinemaplanet.herokuapp.com/order/29/</loc>
+	<lastmod>2021-01-26T13:04:59+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://cinemaplanet.herokuapp.com/order/30/</loc>
+	<lastmod>2021-01-26T13:04:59+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://cinemaplanet.herokuapp.com/order/8/</loc>
+	<lastmod>2021-01-26T13:04:59+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://cinemaplanet.herokuapp.com/order/9/</loc>
+	<lastmod>2021-01-26T13:04:59+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://cinemaplanet.herokuapp.com/order/10/</loc>
+	<lastmod>2021-01-26T13:04:59+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://cinemaplanet.herokuapp.com/order/11/</loc>
+	<lastmod>2021-01-26T13:04:59+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+</urlset>
