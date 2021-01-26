@@ -3218,10 +3218,10 @@
                                     }
                                     let tickets = {sum: getCartTicketSum(), count: getCartTicketQty()}
                                     res += 'Итого: ' + `${tickets.count} ${decletionOfWordTicket(tickets.count)}, ${tickets.sum} грн\n`
-                                        + 'Почта для получения билетов: ' + email + '\n Благодарим Вас за покупку)';
+                                        + 'Почта для получения билетов: ' + email + '\nБлагодарим Вас за покупку)';
                                     alert(res);
                                     parent.location = '/';
-                                } else{
+                                } else {
                                     alert("Недопустимое значение. Введите верное значение");
                                     order();
                                 }

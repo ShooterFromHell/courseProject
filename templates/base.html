@@ -42,25 +42,43 @@
     <![endif]-->
     <link href="{% static 'assets/style.css' %}" rel="stylesheet"/>
     <link rel="shortcut icon" href="/media/images/favicon.ico" type="image/x-icon">
-    <script async src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script type="text/javascript">
-        $(document).ready(function () {
+    <script>
+        window.onscroll = function () {
+            scrollFunction()
+        };
 
-            $(window).scroll(function () {
-                if ($(this).scrollTop() > 200) {
-                    $('.scrollup').fadeIn();
-                } else {
-                    $('.scrollup').fadeOut();
-                }
-            });
+        function scrollFunction() {
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                document.getElementById("scrollup").style.display = "block";
+            } else {
+                document.getElementById("scrollup").style.display = "none";
+            }
+        }
 
-            $('.scrollup').click(function () {
-                $("html, body").animate({scrollTop: 0}, 600);
-                return false;
-            });
-
-        });
+        function topFunction() {
+            document.body.animate({scrollTop: 0}, 600);
+            {#document.documentElement.scrollTop = 0;#}
+        }
     </script>
+{#    <script async src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>#}
+{#    <script type="text/javascript">#}
+{#        $(document).ready(function () {#}
+{##}
+{#            $(window).scroll(function () {#}
+{#                if ($(this).scrollTop() > 200) {#}
+{#                    $('.scrollup').fadeIn();#}
+{#                } else {#}
+{#                    $('.scrollup').fadeOut();#}
+{#                }#}
+{#            });#}
+{##}
+{#            $('.scrollup').click(function () {#}
+{#                $("html, body").animate({scrollTop: 0}, 600);#}
+{#                return false;#}
+{#            });#}
+{##}
+{#        });#}
+{#    </script>#}
     {% recaptcha_init %}
     {% recaptcha_ready action_name='homepage' %}
 </head>
@@ -163,7 +181,7 @@
 <!-- CUSTOM SCRIPTS -->
 <script src="{% static 'assets/js/custom-solid.js' %}"></script>
 
-<a href="#" class="scrollup">Наверх</a>
+<a href="#" class="scrollup" id="scrollup">Наверх</a>
 
 </body>
 </html>
