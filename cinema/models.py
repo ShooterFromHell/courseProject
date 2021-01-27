@@ -10,8 +10,8 @@ class Movie(models.Model):
     movie_title_eng = models.CharField('название фильма англ', max_length=100, null=False)
     genre = models.CharField('жанр', max_length=100, null=False)
     duration = models.CharField('продолжительность', max_length=50, null=False)
-    premiere = models.DateField('премьера', default=timezone.now, null=False)
-    end_of_distribution = models.DateField('конечная дата проката', default=timezone.now, null=False)
+    premiere = models.DateField('премьера', default=timezone.now)
+    end_of_distribution = models.DateField('конечная дата проката', default=timezone.now)
     country = models.CharField('страна производства', max_length=100, null=False)
     director = models.CharField('режиссер', max_length=100, null=False)
     cast = models.CharField('актеры', max_length=250, null=False)
@@ -26,10 +26,10 @@ class Movie(models.Model):
 
 
 class Comment(models.Model):
-    movie = models.ForeignKey(Movie, verbose_name="фильм", on_delete=models.CASCADE, related_name='comments', null=False)
+    movie = models.ForeignKey(Movie, verbose_name="фильм", on_delete=models.CASCADE, related_name='comments')
     author_name = models.CharField(verbose_name="имя автора", max_length=50, null=False)
     comment_text = models.TextField(verbose_name="текст комментария", max_length=500, null=False)
-    created = models.DateTimeField(default=timezone.now, null=False)
+    created = models.DateTimeField(default=timezone.now)
     active = models.BooleanField(default=True)
 
     class Meta:
@@ -43,8 +43,8 @@ class Comment(models.Model):
 
 class Seance(models.Model):
     movie = models.ForeignKey(Movie, verbose_name="фильм", on_delete=models.CASCADE, related_name='seance', null=False)
-    start = models.DateTimeField(verbose_name="начало сеанса", default=timezone.now, null=False)
-    end = models.DateTimeField(verbose_name="конец сеанса", default=timezone.now(), null=False)
+    start = models.DateTimeField(verbose_name="начало сеанса", default=timezone.now)
+    end = models.DateTimeField(verbose_name="конец сеанса", default=timezone.now)
 
     class Meta:
         verbose_name = 'Сеанс'
@@ -52,7 +52,7 @@ class Seance(models.Model):
 
 
 class Ticket(models.Model):
-    seance = models.ForeignKey(Seance, verbose_name="сеанс", on_delete=models.CASCADE, null=False)
+    seance = models.ForeignKey(Seance, verbose_name="сеанс", on_delete=models.CASCADE)
     row = models.CharField(verbose_name="ряд", max_length=3, null=False)
     seat = models.CharField(verbose_name="место", max_length=3, null=False)
 
