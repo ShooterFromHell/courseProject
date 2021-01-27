@@ -48,7 +48,6 @@ INSTALLED_APPS = [
     'crispy_forms',
     'snowpenguin.django.recaptcha3',
     'django.contrib.sitemaps',
-    #    'embed_video',
 ]
 
 MIDDLEWARE = [
