@@ -26,8 +26,8 @@ MEDIA_URL = '/media/'
 SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'pmzesmdcd!$aev=0yfagg7s%ms18+14wz7_+igo5)qrfe%-$%@(_')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
-#DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
+DEBUG = True
+# DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
 
 ALLOWED_HOSTS = ['cinemaplanet.herokuapp.com', '127.0.0.1', 'protected-scrubland-38793.herokuapp.com']
 
