@@ -1,12 +1,13 @@
 {% extends 'base.html' %}
-{#{% load embed_video_tags %}#}
 {% load i18n %}
 {% load crispy_forms_tags %}
 {% load crispy_forms_filters %}
 {% crispy comment_form comment_form.helper %}
 {% crispy form %}
 
-{% block meta %}<meta name="Keywords" content="кинотеатр, Cinema planet, фильмы, {{ movie.movie_title }}, {{ movie.movie_title_eng }}"> {% endblock %}
+{% block meta %}
+    <meta name="Keywords"
+          content="кинотеатр, Cinema planet, фильмы, {{ movie.movie_title }}, {{ movie.movie_title_eng }}"> {% endblock %}
 {% block title %}{{ movie.movie_title }}{% endblock %}
 
 {% block content %}
@@ -45,11 +46,7 @@
                 </div>
             </div>
         </div>
-        {#        <div class="container">#}
-        {#            {% if movie.video %}#}
-        {#                <iframe width="800" height="600" src="{{ movie.video }}" frameborder="0" allowfullscreen></iframe>#}
-        {#            {% endif %}#}
-        {#        </div>#}
+
         <div class="container text-left">
             <div class="row" data-anim-type="fade-in-up">
                 {% for seance in seance %}

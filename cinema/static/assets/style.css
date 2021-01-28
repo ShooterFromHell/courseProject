@@ -52,4 +52,6 @@ textarea {
     background: url('/media/images/icon_top.png') no-repeat;
 }
 
-.grecaptcha-badge {visibility: hidden;}
+.grecaptcha-badge {
+    visibility: hidden;
+}
